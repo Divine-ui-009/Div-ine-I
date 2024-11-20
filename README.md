@@ -1,1 +1,1 @@
-# Div-ine-I
+# Divine-I
