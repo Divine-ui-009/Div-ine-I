@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical</title>
+    <style>
+        div{
+    width: 450px;
+    margin:60px;
+    margin-left:450px;
+    /* align-items:center; */
+    /* justify-content:center; */
+    border: 1px solid rgb(134, 155, 182);
+    border-radius: 23px;
+    backdrop-filter: blur(10px);
+}
+body{
+    background-image:url(bub.jpg);
+    background-size:cover;
+    height:fit-content;
+    width:fit-content;
+    align-items: center;
+}
+.button{
+    background-color: rgb(236, 190, 222);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width:200px;
+    text-align:center;
+    margin-left:80px;
+    border-radius:20px;
+}
+.reset{
+    background-color:rgb(225, 126, 238);
+    border-radius:10px;
+}
+.field{
+    border-radius: 10px;
+    border-color: rgb(247, 227, 242);
+}
+.fet{
+    align-items:center;
+border-radius:7px;
+}
+.pic{
+    background-color:rgb(9, 109, 148);
+    border-radius:4px;
+}
+    </style>
+</head>
+<body>
+    <div>
+    <form method="POST" action="logical.php">
+         <fieldset class="field">
+        <legend>Personal Information</legend>
+        <label for="name">First name</label>
+        <input type="text" name="1name" title="fname" placeholder="your first name" class="fet" required autofocus><br>
+        <label for="name">Last name</label>
+        <input type="text" name="2name" title="lname" placeholder="your last name(s)" class="fet" required><br>
+        <label for="name">Email</label>
+        <input type="text" name="gmail" title="mail" placeholder="your email address" class="fet" required><br>
+        <label for="password">Password</label>
+        <input type="password" name="psw" title="psw" placeholder="Your email password" class="fet" required><br>
+        <label for="tel">Tel number</label>
+        <input type="number" name="tele" title="telephone number" placeholder="your telephone number" maxlenght="13" class="fet"><br>
+        <label for="gender" name="gender">Gender</label><br>
+        <input type="radio" name="gender" title="male" value="male" checked><label for="gender">Male</label><br>
+        <input type="radio" name="gender" title="female" value="female" checked><label for="gender">Female</label><br>
+        <label for="status">Marital status</label><br>
+        <input type="radio" name="status" title="status" value="married" checked>married<br>
+        <input type="radio" name="status" title="status" value="single" checked>Unmarried<br>
+        <label for="count">Country of origin</label>
+        <select name="country" title="origin" size="1"><br>
+            <option value="Rwanda" checked>Rwanda</option>
+            <option value="Burundi">Burundi</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Tanzania">Tanzania</option>
+            <option value="DRC">Congo DR</option>
+            <option value="Uganda">Uganda</option>
+        </select><br>
+        <label for="date">Date of Birth</label>
+        <input type="date" name="birthday" title="birthdate" required><br>
+        <label for="color">What color do you like?</label>
+        <input type="color" title="favourite" name="color"><br>
+        <label for="food">Choose your favourite meal:</label>
+        <input type="text" id="food" name="food" list="food-list">
+        <datalist id="food-list" name="food">
+            <option value="Chips">Chips</option>
+            <option value="Meat">Meat</option>
+            <option value="Spaghetti">Spaghetti</option>
+            <option value="Omlet">Omlet</option>
+            <option value="Pizza">Pizza</option>
+            <option value="Rice">Rice</option>
+            <option value="Burger">Burger</option>
+        </datalist><br>
+        <input type="file" value="" title="upload a picture of yourself" name="image" class="pic">
+    </fieldset>
+    <fieldset>
+        <legend>Parential information</legend>
+        <label for="mom"><strong>Mother's information</strong></label><br>
+        <label for="mother">Mother's name</label>
+        <input type="text" name="mom" title="mama" placeholder="your mother's name" class="fet" required><br>
+        <label for="email">Email</label>
+        <input type="text" name="mail" title="email" placeholder="Her email account" class="fet" required><br>
+        <label for="dad"><strong>Father's information</strong></label><br>
+        <label for="father">Father's name</label>
+        <input type="text" name="dad" title="papa" placeholder="your father's name" class="fet" required><br>
+        <label for="mail">Email</label>
+        <input type="mail" name="fmail" title="email" placeholder="His email account" class="fet" required><br>
+        
+    </fieldset>
+    <fieldset>
+        <legend>Educational background</legend>
+        <label for="level"><strong>Levels of Education for now</strong></label><br>
+        <input type="checkbox" name="level" value="primary" title="level">Primary level<br>
+        <input type="checkbox" name="level" title="level" value="secondary">Secondary level<br>
+        <input type="checkbox" name="level" title="level" value="university">Bacherlors<br>
+        <input type="checkbox" name="level" title="level" value="university">Masters<br>
+        <input type="checkbox" name="level" title="level" value="Doctorate">PHD<br>
+        <input type="checkbox" name="level" title="level" value="None for the moment">None<br>
+        <label for="range">How did you like this page?</label><br>
+        <input type="range" name="like" value="" title="your like for this page"> <br>
+        <textarea title="your comment" name="comment" placeholder="comment on this page" class="fet"></textarea><br>
+        <input type="reset" value="refresh" name="reset" class="reset">
+        <input type="submit" value="submit" class="button" name="submit">
+    </fieldset>
+    <label for="time">Done on</label>
+    <input type="datetime-local" title="date" value="datetime" name="time" required><br><br>
+    
+</form>
+</div>
+</body>
+</html>
