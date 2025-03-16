@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width:250px;
+            height:24px;
+            border-radius: 20px;
+            margin: 3px 50px;
+            padding-left: 10px;
+
+        }
+        input[type="submit"]{
+            background-color:coral;
+            width: 80px;
+            border: 2px solid rgb(223, 30, 30);
+            border-radius:  5px 10px 5px 10px;
+            margin-left: 120px;
+        }
+        fieldset{
+            width: 350px;
+            margin:auto;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <form action="./create.php" method="post">
+        <fieldset>
+            <legend>User Information</legend>
+
+            <label for="">First Name</label><br>
+            <input type="text" name="fname" title="student first name"><br>
+            <label for="">Last Name</label><br>
+            <input type="text" name="lname" title="student last name"><br>
+            <label for="">Home Address</label><br>
+            <input type="text" name="address" title="student home Address"><br>
+            <label for="">Email</label><br>
+            <input type="text" name="email" title="student email"><br>
+            <label for="password">Password</label><br>
+            <input type="password" name="psw" title="Password"><br>
+            <input type="submit" value="Submit" name="submit">
+        </fieldset>
+    </form>
+</body>
+</html>
